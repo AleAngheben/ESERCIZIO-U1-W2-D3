@@ -180,14 +180,9 @@ while (index < starWarsCharacters.length) {
   crewMass = crewMass + currentCharacter.mass;
   index++;
 }
+
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'ipotetica astronave contenente i personaggi dell'array "starWarsCharacters".
-
-
-
-
-
-
 
   Se la massa è inferiore a 500 stampa in console: "Ship is under loaded"
   Se la massa è superiore a 500 stampa in console: "Ship is half loaded"
@@ -201,7 +196,13 @@ while (index < starWarsCharacters.length) {
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
-
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  const newGender = starWarsCharacters[i];
+  if (newGender.gender === "n/a") {
+    newGender.gender = "robot";
+  }
+}
+console.log(starWarsCharacters);
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "characters" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "characters" prima e dopo l'operazione.
